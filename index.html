@@ -30,7 +30,7 @@
     <div class="container">
         <div class="header-inner">
             <a class="brand" href="index.html" aria-label="TMWS home">
-                <img class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
+                <img class="gallery-img" class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
                 <div>
                     <h1>TMWS</h1>
                     <p>Tambaram Malayalee Welfare Samajam</p>
@@ -42,7 +42,7 @@
             </button>
 
             <nav class="nav" data-nav aria-label="Primary navigation">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active">Home</a>
 
                 <div class="dropdown" data-dropdown>
                     <button type="button" aria-expanded="false">About us</button>
@@ -83,7 +83,7 @@
 </header>
 
 <section class="hero" aria-label="Hero">
-    <div class="hero-slide" data-hero-slide style="background-image:url('assets/images/hero.jpg')"></div>
+    <div class="hero-slide active" data-hero-slide style="background-image:url('assets/images/hero.jpg')"></div>
     <div class="hero-slide" data-hero-slide style="background-image:url('assets/images/gallery-1.jpg')"></div>
     <div class="hero-slide" data-hero-slide style="background-image:url('assets/images/gallery-2.jpg')"></div>
 
@@ -234,25 +234,25 @@
             <div class="grid">
                 <div class="card col-3 gallery-card">
                     <figure>
-                        <img loading="lazy" src="assets/images/gallery-1.jpg" alt="TMWS gallery photo 1">
+                        <img class="gallery-img" loading="lazy" src="assets/images/gallery-1.jpg" alt="TMWS gallery photo 1">
                         <figcaption>Festival moments</figcaption>
                     </figure>
                 </div>
                 <div class="card col-3 gallery-card">
                     <figure>
-                        <img loading="lazy" src="assets/images/gallery-2.jpg" alt="TMWS gallery photo 2">
+                        <img class="gallery-img" loading="lazy" src="assets/images/gallery-2.jpg" alt="TMWS gallery photo 2">
                         <figcaption>Stage & performances</figcaption>
                     </figure>
                 </div>
                 <div class="card col-3 gallery-card">
                     <figure>
-                        <img loading="lazy" src="assets/images/gallery-3.jpg" alt="TMWS gallery photo 3">
+                        <img class="gallery-img" loading="lazy" src="assets/images/gallery-3.jpg" alt="TMWS gallery photo 3">
                         <figcaption>Family gatherings</figcaption>
                     </figure>
                 </div>
                 <div class="card col-3 gallery-card">
                     <figure>
-                        <img loading="lazy" src="assets/images/gallery-4.jpg" alt="TMWS gallery photo 4">
+                        <img class="gallery-img" loading="lazy" src="assets/images/gallery-4.jpg" alt="TMWS gallery photo 4">
                         <figcaption>Community & kids</figcaption>
                     </figure>
                 </div>
@@ -286,5 +286,9 @@
 
 <script src="assets/js/main.js" defer></script>
 
+
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+  <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
 </body>
 </html>
