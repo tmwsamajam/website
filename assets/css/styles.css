@@ -117,7 +117,7 @@ img{ max-width:100%; display:block; }
   color: #0b2b44;
   font-weight: 600;
   font-size: 14px;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-radius: 10px;
 }
 .nav a:hover{ background: rgba(30,144,255,0.10); color: var(--brand2); }
@@ -132,7 +132,7 @@ img{ max-width:100%; display:block; }
   color: #0b2b44;
   font-weight: 600;
   font-size: 14px;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -167,6 +167,7 @@ img{ max-width:100%; display:block; }
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  min-height: 44px;
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid transparent;
@@ -348,9 +349,28 @@ img{ max-width:100%; display:block; }
   .col-3{ grid-column: span 6; }
   .col-4{ grid-column: span 6; }
   .col-6{ grid-column: span 12; }
+  .header-actions{
+    display: none;
+  }
 }
 @media (max-width: 720px){
+  .container{
+    padding: 0 14px;
+  }
   .topbar .row{ flex-direction: column; align-items:flex-start; }
+  .header-inner{
+    padding: 10px 0;
+  }
+  .brand{
+    min-width: 0;
+    gap: 10px;
+  }
+  .brand h1{
+    font-size: 15px;
+  }
+  .brand p{
+    font-size: 11px;
+  }
   .nav-toggle{ display:block; }
   .nav{
     display:none;
@@ -364,8 +384,46 @@ img{ max-width:100%; display:block; }
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
   }
   .nav.open{ display:flex; }
   .dropdown-menu{ position: static; min-width: auto; box-shadow: none; border-radius: 12px; }
   .dropdown > button{ width: 100%; text-align: left; }
+  .hero-content{
+    padding: 42px 0 34px;
+  }
+  .hero h2{
+    font-size: clamp(24px, 7.8vw, 32px);
+  }
+  .hero p{
+    font-size: 14px;
+  }
+  .hero-actions .btn{
+    width: 100%;
+  }
+  .hero-aside{
+    padding: 14px;
+  }
+  .section{
+    padding: 28px 0;
+  }
+  .section-title{
+    font-size: 22px;
+  }
+  .gallery-card img{
+    height: 170px;
+  }
+}
+
+@media (max-width: 560px){
+  .col-3{ grid-column: span 12; }
+  .col-4{ grid-column: span 12; }
+  .meta-list li{
+    grid-template-columns: 16px 1fr;
+    font-size: 13px;
+  }
+  .topbar{
+    font-size: 12px;
+  }
 }
