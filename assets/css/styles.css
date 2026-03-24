@@ -538,3 +538,12 @@ img{ max-width:100%; display:block; }
 .partner-link:hover {
   border-bottom: 2px solid var(--brand2);
 }
+
+.role-card img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+}
