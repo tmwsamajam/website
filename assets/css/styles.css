@@ -86,6 +86,14 @@ img{ max-width:100%; display:block; }
   background: linear-gradient(135deg, var(--brand), var(--brand2));
   box-shadow: 0 10px 24px rgba(30, 144, 255, 0.22);
 }
+.brand-logo{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
 .brand h1{
   font-size: 16px;
   margin: 0;
@@ -157,6 +165,9 @@ img{ max-width:100%; display:block; }
 }
 .dropdown-menu a:hover{ background: rgba(10,61,98,0.08); color: var(--brand); }
 .dropdown.open .dropdown-menu{ display:block; }
+@media (min-width: 721px){
+  .dropdown:hover .dropdown-menu{ display:block; }
+}
 
 .header-actions{
   display:flex;
@@ -378,6 +389,15 @@ img{ max-width:100%; display:block; }
 .role-card{
   text-align:center;
   padding: 14px;
+}
+.role-card img{
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 2px solid rgba(30,144,255,0.22);
+  margin: 0 auto 8px;
+  background: #eef2ff;
 }
 .role-card h3{
   margin: 0 0 4px;

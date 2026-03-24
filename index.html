@@ -30,7 +30,7 @@
     <div class="container">
         <div class="header-inner">
             <a class="brand" href="index.html" aria-label="TMWS home">
-                <div class="brand-mark" aria-hidden="true"></div>
+                <img class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
                 <div>
                     <h1>TMWS</h1>
                     <p>Tambaram Malayalee Welfare Samajam</p>
@@ -63,12 +63,19 @@
                     </div>
                 </div>
 
+                <div class="dropdown" data-dropdown>
+                    <button type="button" aria-expanded="false">Events</button>
+                    <div class="dropdown-menu" role="menu">
+                        <a role="menuitem" href="#events">Upcoming Events</a>
+                        <a role="menuitem" href="events.html#past-events">Past Events</a>
+                        <a role="menuitem" href="events.html#calendar">Calendar</a>
+                    </div>
+                </div>
                 <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Contact us</a>
             </nav>
 
             <div class="header-actions">
-                <a class="btn btn-outline" href="gallery.html">View Photos</a>
                 <a class="btn btn-primary" href="contact.html">Join Us</a>
             </div>
         </div>
@@ -161,7 +168,7 @@
         </div>
     </section>
 
-    <section class="section" style="padding-top:0;">
+    <section class="section" id="events" style="padding-top:0;">
         <div class="container">
             <h2 class="section-title">Upcoming Events</h2>
             <p class="lead">Swipe/scroll to view all upcoming programs.</p>

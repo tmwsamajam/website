@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Tambaram Malayalee Welfare Samajam</title>
+  <title>Events | Tambaram Malayalee Welfare Samajam</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -63,11 +63,12 @@
           <div class="dropdown" data-dropdown>
             <button type="button" aria-expanded="false">Events</button>
             <div class="dropdown-menu" role="menu">
-              <a role="menuitem" href="events.html#upcoming-events">Upcoming Events</a>
-              <a role="menuitem" href="events.html#past-events">Past Events</a>
-              <a role="menuitem" href="events.html#calendar">Calendar</a>
+              <a role="menuitem" href="#upcoming-events">Upcoming Events</a>
+              <a role="menuitem" href="#past-events">Past Events</a>
+              <a role="menuitem" href="#calendar">Calendar</a>
             </div>
           </div>
+
           <a href="gallery.html">Gallery</a>
           <a href="contact.html">Contact us</a>
         </nav>
@@ -80,30 +81,65 @@
   </header>
 
   <main id="main">
-    <section class="section">
+    <section class="section" id="upcoming-events">
       <div class="container">
-        <h2 class="section-title">Contact us</h2>
-        <p class="lead">Use these details for now, then replace with your real email/phone/WhatsApp link.</p>
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="lead">Latest announced programs by TMWS.</p>
+        <div class="events-scroll" aria-label="Upcoming events list">
+          <article class="card event-card">
+            <span class="date">Apr 14, 2026</span>
+            <h3>Vishu Celebration</h3>
+            <p>Family gathering, cultural programs, and festive meal.</p>
+          </article>
+          <article class="card event-card">
+            <span class="date">May 10, 2026</span>
+            <h3>Kids Talent Day</h3>
+            <p>Drawing, speech, and performance competitions for children.</p>
+          </article>
+          <article class="card event-card">
+            <span class="date">Jun 23, 2026</span>
+            <h3>Health Awareness Camp</h3>
+            <p>Basic check-up and health session for members and families.</p>
+          </article>
+          <article class="card event-card">
+            <span class="date">Aug 30, 2026</span>
+            <h3>Onam Maholsavam</h3>
+            <p>Pookalam, stage programs, games, and Onam sadhya.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="past-events" style="padding-top:0;">
+      <div class="container">
+        <h2 class="section-title">Past Events</h2>
+        <p class="lead">Highlights from previous programs.</p>
         <div class="grid">
-          <div class="card col-6">
-            <h3 style="margin:0 0 8px;">Get in touch</h3>
-            <p style="margin:0; color: var(--muted);">
-              Email: <a href="mailto:tmws@example.com"><strong>tmws@example.com</strong></a><br>
-              Location: <strong>Tambaram, Chennai</strong>
-            </p>
-            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn-primary" href="mailto:tmws@example.com">Email TMWS</a>
-              <a class="btn btn-outline" href="#" aria-disabled="true" title="Replace this with your WhatsApp invite link">WhatsApp Invite</a>
-            </div>
+          <div class="card col-4 feature">
+            <h3>Onam Celebration 2025</h3>
+            <p>Pookalam competition, cultural programs, and community sadhya.</p>
           </div>
-          <div class="card col-6">
-            <h3 style="margin:0 0 8px;">Membership</h3>
-            <p style="margin:0; color: var(--muted);">
-              Share your name, phone number, and area in Tambaram. We’ll connect you to the right coordinator and keep
-              you updated about upcoming events.
-            </p>
+          <div class="card col-4 feature">
+            <h3>Family Sports Day 2025</h3>
+            <p>Friendly matches and games for children, youth, and adults.</p>
           </div>
+          <div class="card col-4 feature">
+            <h3>Vishu Meetup 2025</h3>
+            <p>Vishu kani, blessings, and community networking session.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calendar" style="padding-top:0;">
+      <div class="container">
+        <h2 class="section-title">Calendar</h2>
+        <p class="lead">A quick month-wise plan (you can edit dates anytime).</p>
+        <div class="grid">
+          <div class="card col-3 feature"><h3>April</h3><p>Vishu Celebration</p></div>
+          <div class="card col-3 feature"><h3>May</h3><p>Kids Talent Day</p></div>
+          <div class="card col-3 feature"><h3>June</h3><p>Health Camp</p></div>
+          <div class="card col-3 feature"><h3>August</h3><p>Onam Maholsavam</p></div>
         </div>
       </div>
     </section>
@@ -118,7 +154,7 @@
         </div>
         <div>
           <h4>Quick links</h4>
-          <p><a href="about.html">About</a> · <a href="management.html">Management</a> · <a href="gallery.html">Gallery</a> · <a href="contact.html">Contact</a></p>
+          <p><a href="about.html">About</a> · <a href="events.html">Events</a> · <a href="management.html">Management</a> · <a href="gallery.html">Gallery</a> · <a href="contact.html">Contact</a></p>
         </div>
         <div>
           <h4>Contact</h4>
