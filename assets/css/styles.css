@@ -3,8 +3,8 @@
   --surface: #ffffff;
   --text: #0f172a;
   --muted: #5b677a;
-  --brand: #0a3d62;
-  --brand2: #1e90ff;
+  --brand: #3064f4;
+  --brand2: #668aff;
   --border: rgba(15, 23, 42, 0.10);
   --shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
   --shadow2: 0 6px 18px rgba(15, 23, 42, 0.08);
@@ -210,7 +210,7 @@ img{ max-width:100%; display:block; }
   content:"";
   position:absolute;
   inset:0;
-  background: linear-gradient(135deg, rgba(10,61,98,0.90), rgba(30,144,255,0.72));
+  background: linear-gradient(135deg, rgba(48, 238, 244, 0.85), rgba(255, 189, 102, 0.836));
   z-index: 1;
 }
 .hero-slide{

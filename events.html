@@ -27,7 +27,7 @@
     <div class="container">
       <div class="header-inner">
         <a class="brand" href="index.html" aria-label="TMWS home">
-          <img class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
+          <img class="gallery-img" class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
           <div>
             <h1>TMWS</h1>
             <p>Tambaram Malayalee Welfare Samajam</p>
@@ -63,7 +63,7 @@
           <div class="dropdown" data-dropdown>
             <button type="button" aria-expanded="false">Events</button>
             <div class="dropdown-menu" role="menu">
-              <a role="menuitem" href="#upcoming-events">Upcoming Events</a>
+              <a role="menuitem" href="#upcoming-events" class="active">Upcoming Events</a>
               <a role="menuitem" href="#past-events">Past Events</a>
               <a role="menuitem" href="#calendar">Calendar</a>
             </div>
@@ -166,6 +166,10 @@
   </footer>
 
   <script src="assets/js/main.js" defer></script>
+
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+  <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
 </body>
 </html>
 

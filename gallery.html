@@ -27,7 +27,7 @@
     <div class="container">
       <div class="header-inner">
         <a class="brand" href="index.html" aria-label="TMWS home">
-          <img class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
+          <img class="gallery-img" class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
           <div>
             <h1>TMWS</h1>
             <p>Tambaram Malayalee Welfare Samajam</p>
@@ -68,7 +68,7 @@
               <a role="menuitem" href="events.html#calendar">Calendar</a>
             </div>
           </div>
-          <a href="gallery.html">Gallery</a>
+          <a href="gallery.html" class="active">Gallery</a>
           <a href="contact.html">Contact us</a>
         </nav>
 
@@ -90,25 +90,25 @@
         <div class="grid">
           <div class="card col-3 gallery-card">
             <figure>
-              <img loading="lazy" src="assets/images/gallery-1.jpg" alt="TMWS gallery photo 1">
+              <img class="gallery-img" loading="lazy" src="assets/images/gallery-1.jpg" alt="TMWS gallery photo 1">
               <figcaption>Gallery photo 1</figcaption>
             </figure>
           </div>
           <div class="card col-3 gallery-card">
             <figure>
-              <img loading="lazy" src="assets/images/gallery-2.jpg" alt="TMWS gallery photo 2">
+              <img class="gallery-img" loading="lazy" src="assets/images/gallery-2.jpg" alt="TMWS gallery photo 2">
               <figcaption>Gallery photo 2</figcaption>
             </figure>
           </div>
           <div class="card col-3 gallery-card">
             <figure>
-              <img loading="lazy" src="assets/images/gallery-3.jpg" alt="TMWS gallery photo 3">
+              <img class="gallery-img" loading="lazy" src="assets/images/gallery-3.jpg" alt="TMWS gallery photo 3">
               <figcaption>Gallery photo 3</figcaption>
             </figure>
           </div>
           <div class="card col-3 gallery-card">
             <figure>
-              <img loading="lazy" src="assets/images/gallery-4.jpg" alt="TMWS gallery photo 4">
+              <img class="gallery-img" loading="lazy" src="assets/images/gallery-4.jpg" alt="TMWS gallery photo 4">
               <figcaption>Gallery photo 4</figcaption>
             </figure>
           </div>
@@ -117,19 +117,19 @@
         <div class="grid" style="margin-top:18px;">
           <div class="card col-4 gallery-card">
             <figure>
-              <img loading="lazy" src="assets/images/gallery-1.jpg" alt="TMWS gallery photo 5">
+              <img class="gallery-img" loading="lazy" src="assets/images/gallery-1.jpg" alt="TMWS gallery photo 5">
               <figcaption>Duplicate slot (replace with new file if desired)</figcaption>
             </figure>
           </div>
           <div class="card col-4 gallery-card">
             <figure>
-              <img loading="lazy" src="assets/images/gallery-2.jpg" alt="TMWS gallery photo 6">
+              <img class="gallery-img" loading="lazy" src="assets/images/gallery-2.jpg" alt="TMWS gallery photo 6">
               <figcaption>Duplicate slot (replace with new file if desired)</figcaption>
             </figure>
           </div>
           <div class="card col-4 gallery-card">
             <figure>
-              <img loading="lazy" src="assets/images/gallery-3.jpg" alt="TMWS gallery photo 7">
+              <img class="gallery-img" loading="lazy" src="assets/images/gallery-3.jpg" alt="TMWS gallery photo 7">
               <figcaption>Duplicate slot (replace with new file if desired)</figcaption>
             </figure>
           </div>
@@ -159,6 +159,10 @@
   </footer>
 
   <script src="assets/js/main.js" defer></script>
+
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+  <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
 </body>
 </html>
 
