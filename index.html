@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMWS - Tambaram Malayalee Welfare Samajam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: #f5f7fb;
+        color: #333;
+    }
+
+    header {
+        background: linear-gradient(135deg, #0a3d62, #1e90ff);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    nav {
+        background: white;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #0a3d62;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #1e90ff;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 30px 20px;
+    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+    .section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0a3d62;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .hero-btn {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background: white;
+        color: #0a3d62;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    footer {
+        background: #0a3d62;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>TMWS</h1>
+    <p>Tambaram Malayalee Welfare Samajam</p>
+    <p>Unity • Culture • Community</p>
+    <a href="#contact" class="hero-btn">Join Us</a>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#activities">Activities</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#members">Members</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div id="about" class="section">
+        <h2>About Us</h2>
+        <div class="card">
+            <p>
+                Tambaram Malayalee Welfare Samajam (TMWS) is a vibrant community
+                connecting Malayalees in Tambaram and surrounding areas.
+            </p>
+            <br>
+            <p>
+                We celebrate traditions, organize events, and build strong bonds
+                among families through cultural and social initiatives.
+            </p>
+        </div>
+    </div>
+
+    <div id="activities" class="section">
+        <h2>Our Activities</h2>
+        <div class="grid">
+            <div class="card">🎉 Onam & Vishu Celebrations</div>
+            <div class="card">👨‍👩‍👧‍👦 Family Get-togethers</div>
+            <div class="card">🏆 Kids Competitions</div>
+            <div class="card">🤝 Community Support</div>
+        </div>
+    </div>
+
+    <div id="events" class="section">
+        <h2>Upcoming Events</h2>
+        <div class="card">
+            <p>No upcoming events announced yet.</p>
+            <p>Stay connected via WhatsApp for updates!</p>
+        </div>
+    </div>
+
+    <div id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="grid">
+            <div class="card"><img src="https://via.placeholder.com/300" style="width:100%; border-radius:10px;"></div>
+            <div class="card"><img src="https://via.placeholder.com/300" style="width:100%; border-radius:10px;"></div>
+            <div class="card"><img src="https://via.placeholder.com/300" style="width:100%; border-radius:10px;"></div>
+            <div class="card"><img src="https://via.placeholder.com/300" style="width:100%; border-radius:10px;"></div>
+        </div>
+    </div>
+
+    <div id="members" class="section">
+        <h2>Our Committee</h2>
+        <div class="grid">
+            <div class="card" style="text-align:center;">
+                <img src="https://via.placeholder.com/120" style="border-radius:50%; margin-bottom:10px;">
+                <h3>President Name</h3>
+                <p>President</p>
+            </div>
+
+            <div class="card" style="text-align:center;">
+                <img src="https://via.placeholder.com/120" style="border-radius:50%; margin-bottom:10px;">
+                <h3>Secretary Name</h3>
+                <p>Secretary</p>
+            </div>
+
+            <div class="card" style="text-align:center;">
+                <img src="https://via.placeholder.com/120" style="border-radius:50%; margin-bottom:10px;">
+                <h3>Treasurer Name</h3>
+                <p>Treasurer</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="card">
+            <p><strong>Email:</strong> tmws@example.com</p>
+            <p><strong>Location:</strong> Tambaram, Chennai</p>
+            <p><strong>Community:</strong> Join our WhatsApp group</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 TMWS | Tambaram Malayalee Welfare Samajam</p>
+</footer>
+
+</body>
+</html>
