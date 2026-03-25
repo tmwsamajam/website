@@ -44,4 +44,53 @@
   }
 })();
 
+const images = document.querySelectorAll(".gallery-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
 
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+const albums = {
+  onam: [
+    "assets/images/gallery/onam-2025/1.jpg",
+    "assets/images/gallery/onam-2025/2.jpg",
+    "assets/images/gallery/onam-2025/3.jpg"
+  ],
+  vishu: [
+    "assets/images/gallery/vishu-2026/1.jpg",
+    "assets/images/gallery/vishu-2026/2.jpg"
+  ]
+};
+
+function toggleAlbum(name) {
+  const container = document.getElementById("album-container");
+
+  // toggle close
+  if (container.getAttribute("data-open") === name) {
+    container.innerHTML = "";
+    container.removeAttribute("data-open");
+    return;
+  }
+
+  container.setAttribute("data-open", name);
+  container.innerHTML = "";
+
+  albums[name].forEach(img => {
+    container.innerHTML += `
+      <div class="card col-3">
+        <img src="${img}" class="gallery-img">
+      </div>
+    `;
+  });
+
+  enableLightbox();
+}
