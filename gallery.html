@@ -103,6 +103,98 @@ body {
   margin-top: 20px;
 }
 
+.gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    /* Tablet */
+    @media (max-width: 980px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Album cards */
+    .album-card {
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .album-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* FIX: rectangle image */
+    .album-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .album-card h3 {
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    /* Images grid */
+    #album-container {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 980px) {
+      #album-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      #album-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #album-container img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -125,9 +217,14 @@ body {
 }
 
 .album-card {
-  cursor: pointer;
-  transition: 0.3s;
-}
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      text-align: center;
+    }
 
 .album-card:hover {
   transform: translateY(-5px);
@@ -247,27 +344,57 @@ function enableLightbox(){
 
 <script src="assets/js/main.js" defer></script>
 
-  <footer class="footer">
+  <footer class="footer"> 
     <div class="container">
-      <div class="row">
-        <div style="max-width: 56ch;">
-          <h4>TMWS</h4>
-          <p>Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.</p>
-        </div>
-        <div>
-          <h4>Quick links</h4>
-          <p><a href="about.html">About</a> · <a href="management.html">Management</a> · <a href="gallery.html">Gallery</a> · <a href="contact.html">Contact</a></p>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <p><a href="mailto:tmws@example.com">tmws@example.com</a><br>Tambaram, Chennai</p>
-        </div>
-      </div>
-      <p style="margin-top:16px;">© 2026 TMWS | Tambaram Malayalee Welfare Samajam</p>
-    </div>
-  </footer>
 
-  <script src="assets/js/main.js" defer></script>
+        <div class="footer-grid">
+            
+            <!-- ABOUT -->
+            <div>
+                <h4>TMWS</h4>
+                <p>
+                    Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="management.html">Management</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT + SOCIAL -->
+            <div>
+                <h4>Contact</h4>
+                <p>
+                    <a href="mailto:tmwsamajam@gmail.com">tmwsamajam@gmail.com</a><br>
+                    Tambaram, Chennai
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+  <div class="footer-bottom-inner">
+    <div class="footer-left">
+      © 2026 TMWS | Tambaram Malayalee Welfare Samajam
+    </div>
+    <div class="footer-right">
+      Designed by Shabin & Rijina
+    </div>
+  </div>
+</div>
+
+    </div>
+</footer>
+
 </body>
 </html><!DOCTYPE html>
 <html lang="en">
