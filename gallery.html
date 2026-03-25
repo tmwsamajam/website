@@ -15,7 +15,7 @@
       <div class="row">
         <div>Tambaram Malayalee Welfare Samajam (TMWS)</div>
         <div>
-          <a href="mailto:tmwsamajam@gmail.com">tmwsamajam@gmail.com</a>
+          <a href="mailto:tmws@example.com">tmws@example.com</a>
           <span aria-hidden="true"> · </span>
           <a href="contact.html">Contact</a>
         </div>
@@ -78,104 +78,153 @@
       </div>
     </div>
   </header>
-<head>
+
+  <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery | Tambaram Malayalee Welfare Samajam</title>
+<title>Gallery | TMWS</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
 
 <style>
-/* Make images clickable */
-.gallery-img {
-  cursor: pointer;
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
 }
 
-/* Album hover */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  width: 23%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 .album-card {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .album-card:hover {
   transform: translateY(-5px);
 }
-</style>
 
+.gallery-img {
+  cursor: pointer;
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+</style>
 </head>
+
 <body>
 
-<main class="section">
 <div class="container">
-
 <h2 class="section-title">Gallery</h2>
-<p class="lead">Browse event-wise photo collections.</p>
+<p style="text-align:center;">Browse event-wise photo collections</p>
 
 <!-- Albums -->
 <div class="grid">
+<div class="card col-3 album-card">
+  <a href="album.html?folder=womens-day-2025">
+    <img src="assets/images/gallery/womens-day-2025/1.jpg">
+    <h3>Womens Day - 2025</h3>
+  </a>
+</div>
 
-<div class="card col-3 album-card" onclick="toggleAlbum('onam')">
+<div class="card album-card" onclick="loadAlbum('onam-2025')">
   <img src="assets/images/gallery/onam-2025/1.jpg">
-  <h3>Onam 2025</h3>
+  <h3>Onam - 2025</h3>
 </div>
 
-<div class="card col-3 album-card" onclick="toggleAlbum('vishu')">
+<div class="card album-card" onclick="loadAlbum('vishu-2026')">
   <img src="assets/images/gallery/vishu-2026/1.jpg">
-  <h3>Vishu 2026</h3>
+  <h3>Vishu - 2026</h3>
 </div>
 
-<div class="card col-3 album-card" onclick="toggleAlbum('Ayalkootam')">
-  <img src="assets/images/gallery/ayalkootam-26'/1.jpg">
-  <h3>Ayalkootam-26</h3>
+<div class="card album-card" onclick="loadAlbum('ayalkootam-26')">
+  <img src="assets/images/gallery/ayalkootam-26/1.jpg">
+  <h3>Ayalkootam - 2026</h3>
 </div>
 
 </div>
 
-<!-- Expanded Images -->
+<!-- Images will load here -->
 <div id="album-container" class="grid" style="margin-top:20px;"></div>
 
 </div>
-</main>
 
 <!-- Lightbox -->
-<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
-  <img id="lightbox-img" style="max-width:90%; max-height:90%;">
+<div id="lightbox">
+  <img id="lightbox-img">
 </div>
 
 <script>
-const albums = {
-  onam: [
-    "assets/images/gallery/onam-2025/1.jpg",
-    "assets/images/gallery/onam-2025/2.jpg"
-  ],
-  vishu: [
-    "assets/images/gallery/vishu-2026/1.jpg",
-    "assets/images/gallery/vishu-2026/2.jpg"
-  ],
-  Ayalkootam: [
-    "assets/images/gallery/Ayalkootam-26'/1.jpg"
-  ]
-};
-
-function toggleAlbum(name){
+function loadAlbum(folder, maxImages = 50){
   const container = document.getElementById("album-container");
 
-  if(container.getAttribute("data-open") === name){
+  if(container.getAttribute("data-open") === folder){
     container.innerHTML = "";
     container.removeAttribute("data-open");
     return;
   }
 
-  container.setAttribute("data-open", name);
+  container.setAttribute("data-open", folder);
   container.innerHTML = "";
 
-  albums[name].forEach(img=>{
-    container.innerHTML += `<div class="card col-3">
-      <img src="${img}" class="gallery-img">
-    </div>`;
-  });
+  for(let i = 1; i <= maxImages; i++){
+    const imgPath = `assets/images/gallery/${folder}/${i}.jpg`;
 
-  enableLightbox();
+    const img = new Image();
+    img.src = imgPath;
+
+    img.onload = function(){
+      const div = document.createElement("div");
+      div.className = "card";
+
+      div.innerHTML = `<img src="${imgPath}" class="gallery-img">`;
+      container.appendChild(div);
+
+      enableLightbox();
+    };
+  }
 }
 
 function enableLightbox(){
@@ -195,6 +244,32 @@ function enableLightbox(){
   }
 }
 </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div style="max-width: 56ch;">
+          <h4>TMWS</h4>
+          <p>Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <p><a href="about.html">About</a> · <a href="management.html">Management</a> · <a href="gallery.html">Gallery</a> · <a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:tmws@example.com">tmws@example.com</a><br>Tambaram, Chennai</p>
+        </div>
+      </div>
+      <p style="margin-top:16px;">© 2026 TMWS | Tambaram Malayalee Welfare Samajam</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+
 
 </body>
 </html>

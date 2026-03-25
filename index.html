@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TMWS - Tambaram Malayalee Welfare Samajam</title>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -97,11 +95,14 @@
                         <span aria-hidden="true">TMWS</span>
                         <span style="opacity:.95; font-weight:500;">Unity • Culture • Community</span>
                     </div>
-                    <h2>A home for Malayalee families in Tambaram.</h2>
-                    <p>
-                        We bring people together through festivals, arts, learning initiatives, and community support.
-                        Be part of events that celebrate Kerala’s rich heritage.
-                    </p>
+                    <h2 class="hero-title">
+  A home for Malayalee families in Tambaram.
+</h2>
+
+<p class="hero-text">
+  We bring people together through festivals, arts, learning initiatives, and community support.
+  Be part of events that celebrate Kerala’s rich heritage.
+</p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="contact.html">Become a Member</a>
                         <a class="btn btn-outline" href="about.html">Learn More</a>
@@ -235,27 +236,162 @@
         </div>
     </section>
     
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div style="max-width: 56ch;">
-                <h4>TMWS</h4>
-                <p>Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.</p>
-            </div>
-            <div>
-                <h4>Quick links</h4>
-                <p><a href="about.html">About</a> · <a href="management.html">Management</a> · <a href="gallery.html">Gallery</a> · <a href="contact.html">Contact</a></p>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <p><a href="mailto:tmws@example.com">tmws@example.com</a><br>Tambaram, Chennai</p>
-            </div>
-        </div>
-        <p style="margin-top:16px;">© 2026 TMWS | Tambaram Malayalee Welfare Samajam</p>
-    </div>
-</footer>
+
 
 <script src="assets/js/main.js" defer></script>
 
 </body>
 </html>
+<footer class="footer"> 
+    <div class="container">
+
+        <div class="footer-grid">
+            
+            <!-- ABOUT -->
+            <div>
+                <h4>TMWS</h4>
+                <p>
+                    Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="management.html">Management</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT + SOCIAL -->
+            <div>
+                <h4>Contact</h4>
+                <p>
+                    <a href="mailto:tmws@example.com">tmws@example.com</a><br>
+                    Tambaram, Chennai
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="social-icons">
+                    <a href="https://facebook.com/YOUR_PAGE" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    </a>
+                    <a href="https://instagram.com/YOUR_PAGE" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            © 2026 TMWS | Tambaram Malayalee Welfare Samajam
+        </div>
+
+    </div>
+</footer>
+
+<style>
+
+/* FOOTER BASE */
+.footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 50px 20px 20px;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* HEADINGS */
+.footer h4 {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* UNDERLINE EFFECT */
+.footer h4::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #ff7a18;
+  margin-top: 6px;
+  transition: 0.3s;
+}
+
+.footer h4:hover::after {
+  width: 50px;
+}
+
+/* LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer a {
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #ffb347;
+  padding-left: 5px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 6px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.social-icons img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BRAND COLORS */
+.social-icons a:nth-child(1):hover img {
+  background: #1877f2;
+}
+
+.social-icons a:nth-child(2):hover img {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+</style>

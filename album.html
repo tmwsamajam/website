@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Tambaram Malayalee Welfare Samajam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div>Tambaram Malayalee Welfare Samajam (TMWS)</div>
+        <div>
+          <a href="mailto:tmws@example.com">tmws@example.com</a>
+          <span aria-hidden="true"> · </span>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" aria-label="Site header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="TMWS home">
+          <img class="brand-logo" src="assets/images/logo.png" alt="TMWS logo">
+          <div>
+            <h1>TMWS</h1>
+            <p>Tambaram Malayalee Welfare Samajam</p>
+          </div>
+        </a>
+
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" data-nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+
+          <div class="dropdown" data-dropdown>
+            <button type="button" aria-expanded="false">About us</button>
+            <div class="dropdown-menu" role="menu">
+              <a role="menuitem" href="about.html">About TMWS</a>
+              <a role="menuitem" href="about.html#vision">Our Vision</a>
+              <a role="menuitem" href="about.html#activities">Social & Cultural Activities</a>
+              <a role="menuitem" href="about.html#facilities">Facilities</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button type="button" aria-expanded="false">Management</button>
+            <div class="dropdown-menu" role="menu">
+              <a role="menuitem" href="management.html#advisory">Advisory Board</a>
+              <a role="menuitem" href="management.html#committee">Central Committee</a>
+              <a role="menuitem" href="management.html#area">Area Committee</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button type="button" aria-expanded="false">Events</button>
+            <div class="dropdown-menu" role="menu">
+              <a role="menuitem" href="events.html#upcoming-events">Upcoming Events</a>
+              <a role="menuitem" href="events.html#past-events">Past Events</a>
+              <a role="menuitem" href="events.html#calendar">Calendar</a>
+            </div>
+          </div>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact us</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-primary" href="contact.html">Join Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Album</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  width: 23%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2 id="album-title">Album</h2>
+
+<div id="gallery" class="grid"></div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script>
+// Get folder name from URL
+const params = new URLSearchParams(window.location.search);
+const folder = params.get("folder");
+
+document.getElementById("album-title").innerText = folder.replace(/-/g, " ").toUpperCase();
+
+const gallery = document.getElementById("gallery");
+
+// Auto load images
+for(let i = 1; i <= 50; i++){
+  const imgPath = `assets/images/gallery/${folder}/${i}.jpg`;
+
+  const img = new Image();
+  img.src = imgPath;
+
+  img.onload = function(){
+    const div = document.createElement("div");
+    div.className = "card";
+
+    div.innerHTML = `<img src="${imgPath}">`;
+    gallery.appendChild(div);
+
+    enableLightbox();
+  };
+}
+
+// Lightbox
+function enableLightbox(){
+  const images = document.querySelectorAll(".card img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  images.forEach(img=>{
+    img.onclick = ()=>{
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    }
+  });
+
+  lightbox.onclick = ()=>{
+    lightbox.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+<footer class="footer"> 
+    <div class="container">
+
+        <div class="footer-grid">
+            
+            <!-- ABOUT -->
+            <div>
+                <h4>TMWS</h4>
+                <p>
+                    Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="management.html">Management</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT + SOCIAL -->
+            <div>
+                <h4>Contact</h4>
+                <p>
+                    <a href="mailto:tmws@example.com">tmws@example.com</a><br>
+                    Tambaram, Chennai
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="social-icons">
+                    <a href="https://facebook.com/YOUR_PAGE" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    </a>
+                    <a href="https://instagram.com/YOUR_PAGE" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            © 2026 TMWS | Tambaram Malayalee Welfare Samajam
+        </div>
+
+    </div>
+</footer>
+
+<style>
+
+/* FOOTER BASE */
+.footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 50px 20px 20px;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* HEADINGS */
+.footer h4 {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* UNDERLINE EFFECT */
+.footer h4::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #ff7a18;
+  margin-top: 6px;
+  transition: 0.3s;
+}
+
+.footer h4:hover::after {
+  width: 50px;
+}
+
+/* LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer a {
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #ffb347;
+  padding-left: 5px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 6px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.social-icons img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BRAND COLORS */
+.social-icons a:nth-child(1):hover img {
+  background: #1877f2;
+}
+
+.social-icons a:nth-child(2):hover img {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+</style>
