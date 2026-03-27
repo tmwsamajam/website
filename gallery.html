@@ -103,98 +103,6 @@ body {
   margin-top: 20px;
 }
 
-.gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    /* Tablet */
-    @media (max-width: 980px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Album cards */
-    .album-card {
-      cursor: pointer;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      text-align: center;
-    }
-
-    .album-card:hover {
-      transform: translateY(-5px);
-    }
-
-    /* FIX: rectangle image */
-    .album-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .album-card h3 {
-      padding: 12px;
-      font-size: 16px;
-    }
-
-    /* Images grid */
-    #album-container {
-      margin-top: 25px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    @media (max-width: 980px) {
-      #album-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      #album-container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    #album-container img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    /* Lightbox */
-    #lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -217,14 +125,9 @@ body {
 }
 
 .album-card {
-      cursor: pointer;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      text-align: center;
-    }
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .album-card:hover {
   transform: translateY(-5px);
@@ -259,28 +162,47 @@ body {
 
 <!-- Albums -->
 <div class="grid">
-<div class="card col-3 album-card">
-  <a href="album.html?folder=womens-day-2025">
-    <img src="assets/images/gallery/womens-day-2025/1.jpg">
-    <h3>Womens Day - 2025</h3>
+
+  <div class="card album-card">
+    <a href="womens-day-2025.html?folder=womens-day-2025">
+      <img src="assets/images/gallery/womens-day-2025/1.jpg">
+      <h3>Womens Day - 2025</h3>
+    </a>
+  </div>
+
+  <div class="card album-card">
+   <a href="Sports day - 2025.html?folder=Sports day - 2025">
+    <img src="assets/images/gallery/Sports day - 2025/1.jpg">
+    <h3>Sports day - 2025</h3>
+  </a>
+</div>
+  <div class="card album-card">
+   <a href="onam - 2025.html?folder=onam - 2025">
+    <img src="assets/images/gallery/onam-2025/1.jpg">
+    <h3>Onam - 2025</h3>
   </a>
 </div>
 
-<div class="card album-card" onclick="loadAlbum('onam-2025')">
-  <img src="assets/images/gallery/onam-2025/1.jpg">
-  <h3>Onam - 2025</h3>
+  <div class="card album-card">
+     <a href="Ayalkootam-sports - 2025.html?folder=Ayalkootam-sports - 2025">
+    <img src="assets/images/gallery/Ayalkootam-sports - 2025/1.jpg">
+    <h3>Ayalkootam-sports - 2025</h3>
+  </a>
+  </div>
+ <div class="card album-card">
+    <a href="womens-day-2026.html?folder=womens-day-2025">
+      <img src="assets/images/gallery/womens-day-2025/1.jpg">
+      <h3>Womens Day - 2026</h3>
+    </a>
+  </div>
+<div class="card album-card">
+     <a href="Ayalkootam-sports - 2026.html?folder=Ayalkootam-sports - 2026">
+    <img src="assets/images/gallery/Ayalkootam-sports - 2026/1.jpg">
+    <h3>Ayalkootam-sports - 2026</h3>
+  </a>
+  </div>
+ 
 </div>
-
-<div class="card album-card" onclick="loadAlbum('vishu-2026')">
-  <img src="assets/images/gallery/vishu-2026/1.jpg">
-  <h3>Vishu - 2026</h3>
-</div>
-
-<div class="card album-card" onclick="loadAlbum('ayalkootam-26')">
-  <img src="assets/images/gallery/ayalkootam-26/1.jpg">
-  <h3>Ayalkootam - 2026</h3>
-</div>
-
 </div>
 
 <!-- Images will load here -->
@@ -342,59 +264,130 @@ function enableLightbox(){
 }
 </script>
 
-<script src="assets/js/main.js" defer></script>
-
-  <footer class="footer"> 
+  <footer class="footer">
     <div class="container">
-
-        <div class="footer-grid">
-            
-            <!-- ABOUT -->
-            <div>
-                <h4>TMWS</h4>
-                <p>
-                    Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.
-                </p>
-            </div>
-
-            <!-- QUICK LINKS -->
-            <div>
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="management.html">Management</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- CONTACT + SOCIAL -->
-            <div>
-                <h4>Contact</h4>
-                <p>
-                    <a href="mailto:tmwsamajam@gmail.com">tmwsamajam@gmail.com</a><br>
-                    Tambaram, Chennai
-                </p>
-
-            </div>
-
+      <div class="row">
+        <div style="max-width: 56ch;">
+          <h4>TMWS</h4>
+          <p>Tambaram Malayalee Welfare Samajam — unity, culture, and community in Tambaram.</p>
         </div>
-
-        <!-- BOTTOM -->
-        <div class="footer-bottom">
-  <div class="footer-bottom-inner">
-    <div class="footer-left">
-      © 2026 TMWS | Tambaram Malayalee Welfare Samajam
+        <div>
+          <h4>Quick links</h4>
+          <p><a href="about.html">About</a> · <a href="management.html">Management</a> · <a href="gallery.html">Gallery</a> · <a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:tmws@example.com">tmws@example.com</a><br>Tambaram, Chennai</p>
+        </div>
+      </div>
+      <p style="margin-top:16px;">© 2026 TMWS | Tambaram Malayalee Welfare Samajam</p>
     </div>
-    <div class="footer-right">
-      Designed by Shabin & Rijina
-    </div>
-  </div>
-</div>
+     <div class="social-icons">
+                    <a href="https://facebook.com/YOUR_PAGE" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    </a>
+                    <a href="https://instagram.com/YOUR_PAGE" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    </a>
+                </div>
+  </footer>
+<style>
+  .footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 50px 20px 20px;
+}
 
-    </div>
-</footer>
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
 
+/* HEADINGS */
+.footer h4 {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* UNDERLINE EFFECT */
+.footer h4::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #ff7a18;
+  margin-top: 6px;
+  transition: 0.3s;
+}
+
+.footer h4:hover::after {
+  width: 50px;
+}
+
+/* LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer a {
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #ffb347;
+  padding-left: 5px;
+}
+  .social-icons {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 6px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.social-icons img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BRAND COLORS */
+.social-icons a:nth-child(1):hover img {
+  background: #1877f2;
+}
+
+.social-icons a:nth-child(2):hover img {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+</style>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html><!DOCTYPE html>
 <html lang="en">
