@@ -409,6 +409,210 @@ img{ max-width:100%; display:block; }
   font-size: 13px;
 }
 
+/* Management organization chart */
+.management-intro{
+  padding-bottom: 18px;
+}
+.org-section{
+  padding-top: 0;
+}
+.org-chart{
+  --org-line: #334155;
+  max-width: 1050px;
+  margin: 18px auto 0;
+  padding: 12px 0 8px;
+}
+.org-card{
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border: 2px solid var(--org-line);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 14px 16px;
+  text-align: center;
+}
+.org-card h3,
+.org-card h4{
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.org-card h4{
+  margin-top: 18px;
+  text-align: left;
+  text-transform: none;
+}
+.org-card p{
+  margin: 0;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.org-card ul{
+  display: inline-block;
+  margin: 0;
+  padding-left: 18px;
+  text-align: left;
+}
+.org-card li{
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.org-card-primary{
+  min-height: 82px;
+}
+.org-top{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+.org-top::after{
+  content: "";
+  position: absolute;
+  top: 84px;
+  left: 37.5%;
+  width: calc(25% + 14px);
+  border-top: 2px solid var(--org-line);
+}
+.org-founder{
+  grid-column: 2;
+  justify-self: center;
+  width: 100%;
+  max-width: 230px;
+}
+.org-advisory{
+  grid-column: 3;
+  width: 100%;
+  min-width: 220px;
+  text-align: left;
+}
+.org-advisory::before{
+  content: "";
+  position: absolute;
+  top: 78px;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid var(--org-line);
+}
+.org-connector-main{
+  position: relative;
+  height: 82px;
+}
+.org-connector-main::before,
+.org-connector-main::after{
+  content: "";
+  position: absolute;
+}
+.org-connector-main::before{
+  top: -18px;
+  bottom: 0;
+  left: 37.5%;
+  border-left: 2px solid var(--org-line);
+}
+.org-connector-main::after{
+  left: 7%;
+  right: 7%;
+  bottom: 0;
+  border-top: 2px solid var(--org-line);
+}
+.org-officers{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px;
+  margin-bottom: 34px;
+}
+.org-officers .org-card::before{
+  content: "";
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  height: 34px;
+  border-left: 2px solid var(--org-line);
+}
+.org-officers .org-card::after{
+  content: "";
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  height: 34px;
+  border-left: 2px solid var(--org-line);
+}
+.org-subgrid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px;
+  align-items: start;
+}
+.org-subgrid > .org-card{
+  margin-top: 0;
+}
+.org-list-card{
+  text-align: left;
+}
+.org-list-card h3{
+  text-align: left;
+}
+.org-wing-card{
+  align-self: center;
+  text-align: center;
+}
+.org-role{
+  margin-top: 12px !important;
+  color: #1d4ed8 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+.org-role + p{
+  margin-top: 4px;
+}
+@media (max-width: 980px){
+  .org-top,
+  .org-officers,
+  .org-subgrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .org-founder,
+  .org-advisory{
+    grid-column: auto;
+    max-width: none;
+  }
+  .org-top::after,
+  .org-advisory::before,
+  .org-connector-main,
+  .org-officers .org-card::before,
+  .org-officers .org-card::after{
+    display: none;
+  }
+  .org-top,
+  .org-officers{
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 620px){
+  .org-top,
+  .org-officers,
+  .org-subgrid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .org-card{
+    padding: 13px 14px;
+  }
+}
+
 .footer{
   background: #072c48;
   color: rgba(255,255,255,0.92);
