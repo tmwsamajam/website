@@ -542,10 +542,18 @@ img{ max-width:100%; display:block; }
   height: 34px;
   border-left: 2px solid var(--org-line);
 }
+.org-officers .org-card::after{
+  content: "";
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  height: 34px;
+  border-left: 2px solid var(--org-line);
+}
 .org-subgrid{
   display: grid;
-  grid-template-columns: 1.15fr 1.15fr 1.1fr 1.65fr;
-  gap: 28px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px;
   align-items: start;
 }
 .org-subgrid > .org-card{
@@ -584,7 +592,8 @@ img{ max-width:100%; display:block; }
   .org-top::after,
   .org-advisory::before,
   .org-connector-main,
-  .org-officers .org-card::before{
+  .org-officers .org-card::before,
+  .org-officers .org-card::after{
     display: none;
   }
   .org-top,
